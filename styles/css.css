@@ -18,15 +18,35 @@ header, footer{
     width: 100%;
 }
 
+p{
+    text-align: center;
+    font-weight: bold;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #41924B;
+    margin: 1em 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 20px 5px;
+}
+
 div{
     background: #87E293;
     border: 1px solid #41924B;
-    margin: 20px;
-    padding: 20px;
+    margin: 10px;
+    padding: 10px;
 }
 
 #left{
     height: 40px;
+    width: 200px;
     max-width: 200px;
     min-height: 180px;
     text-align: center;
@@ -34,6 +54,7 @@ div{
 
 #login{
     width: 300px;
+    border-radius: 10px;
 }
 
 a.button{
