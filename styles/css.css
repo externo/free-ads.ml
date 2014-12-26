@@ -1,3 +1,8 @@
+*{
+    font-size: 18px;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+}
+
 header, footer{
     height: 40px;
     background: #87E293;
@@ -6,4 +11,29 @@ header, footer{
     padding-top: 5px;
     text-align: center;
     font-size: 20px;
+}
+
+.container{
+    background: #D7F4D4;
+    width: 100%;
+}
+
+.loginRegister{
+    height: 40px;
+    background: #87E293;
+    border: 1px solid #41924B;
+    margin: 20px;
+    padding: 20px;
+    max-width: 200px;
+    min-height: 180px;
+    text-align: center;
+}
+
+button{
+    width: 120px;
+    background: #46D246;
+    border: 1px solid #41924B;
+    border-radius: 5px;
+    margin: 8px;
+    color: #ffffff;
 }
