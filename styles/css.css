@@ -18,24 +18,31 @@ header, footer{
     width: 100%;
 }
 
-.left{
-    height: 40px;
+div{
     background: #87E293;
     border: 1px solid #41924B;
     margin: 20px;
     padding: 20px;
+}
+
+#left{
+    height: 40px;
     max-width: 200px;
     min-height: 180px;
     text-align: center;
 }
 
+#login{
+    width: 300px;
+}
+
 a.button{
-    width: 120px;
+    width: 80px;
     background: #46D246;
     border: 1px solid #41924B;
     border-radius: 5px;
     margin: 8px;
-    padding: 5px;
+    padding: 3px;
     color: #ffffff;
     display: inline-block;
 }
