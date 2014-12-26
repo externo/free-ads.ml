@@ -29,11 +29,13 @@ header, footer{
     text-align: center;
 }
 
-button{
+a.button{
     width: 120px;
     background: #46D246;
     border: 1px solid #41924B;
     border-radius: 5px;
     margin: 8px;
+    padding: 5px;
     color: #ffffff;
+    display: inline-block;
 }
