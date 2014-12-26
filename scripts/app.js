@@ -2,10 +2,11 @@
 
 var app = angular.module('adsApp', ['ngResource', 'ngRoute'])
     .config(function ($routeProvider) {
-        $routeProvider.when('/login', {
+        $routeProvider
+            .when('/login', {
             templateUrl: 'views/login.html'
-        });
-        $routeProvider.when('/register', {
+        })
+            .when('/register', {
             templateUrl: 'views/register.html'
         });
     });
