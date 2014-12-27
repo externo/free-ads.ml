@@ -12,8 +12,10 @@ var app = angular.module('adsApp', ['ngResource', 'ngRoute'])
             .when('/ads', {
                 templateUrl: 'views/allAds.html',
                 controller: 'AllAdsController'
-            })
-            .otherwise('/ads');
-    });
-
-
+            });
+        //$routeProvider.when('/ads/:adId', {
+        //    test: 'Pesho',
+        //    templateUrl: 'templates/adDetails.html',
+        //    controller: 'AdDetailsController'
+        //});
+});
