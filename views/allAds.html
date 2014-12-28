@@ -1,11 +1,21 @@
-<div class="col-sm-6">dasdasd
-    <ul ng-repeat="ad in data.ads">
-        <li>
-            <h1>{{ad.title}}</h1>
-            <div><strong>Text:</strong> {{ad.text}}</div>
-            <div><strong>Town:</strong> {{ad.townName}}</div>
-            <div><strong>Category:</strong> {{ad.categoryName}}</div>
-            <div><strong>Status:</strong> {{ad.status}}</div>
-        </li>
-    </ul>
-</div>
+<ul ng-repeat="ad in data.ads">
+    <div class="col-sm-6">
+        <table id="adTable">
+            <thead>
+                <th>{{ad.title}}</th><th>{{ad.date}}</th>
+            </thead>
+            <tr>
+                <td><img ng-src="{{ad.imageDataUrl}}" /></td><td>{{ad.text}}</td><td></td>
+            </tr>
+            <tr>
+                <td></td><td>Name:</td><td>{{ad.ownerName}}</td>
+            </tr>
+            <tr>
+                <td></td><td>Em@il:</td><td>{{ad.ownerEmail}}</td>
+            </tr>
+            <tr>
+                <td></td><td>Tel:</td><td>{{ad.ownerPhone}}</td>
+            </tr>
+        </table>
+    </div>
+</ul>
