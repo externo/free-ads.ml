@@ -1,8 +1,8 @@
 app.controller('AllTownsController', function($scope, $log, adsData) {
 	adsData.getAllTowns()
 		.$promise
-		.then(function (data) {
-			$scope.towns = data;
+		.then(function (towns) {
+			$scope.towns = towns;
 		}, function (error) {
 			$log.error(error);
 		});

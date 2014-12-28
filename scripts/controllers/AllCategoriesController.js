@@ -5,7 +5,5 @@ app.controller('AllCategoriesController', function($scope, $log, adsData) {
 			$scope.categories = data;
 		}, function (error) {
 			$log.error(error);
-
-            console.log('eroe');
 		});
 });
