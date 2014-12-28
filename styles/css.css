@@ -23,6 +23,12 @@ p{
     font-weight: bold;
 }
 
+img{
+    max-width: 150px;
+    max-height: 150px;
+    text-align: center;
+}
+
 hr {
     display: block;
     height: 1px;

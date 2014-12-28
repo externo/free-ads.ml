@@ -18,24 +18,9 @@
             </div>
         </section>
 
-        <section data-ng-view=""></section>
+        <section class="col-sm-7" data-ng-view=""></section>
 
-        <section>
-            <div class="col-sm-2">
-                Categories
-                <hr />
-                <!--<ul data-ng-repeat="">-->
-                    <!--<li></li>-->
-                <!--</ul>-->
-            </div>
-            <div class="col-sm-2">
-                Towns
-                <hr />
-                <!--<ul data-ng-repeat="">-->
-                    <!--<li></li>-->
-                <!--</ul>-->
-            </div>
-        </section>
+        <section class="col-sm-2" ng-include="'views/townsNcategories.html'"></section>
     </section>
     <footer>2014 Software university foundation. No right reserved.</footer>
     <script src="lib/angular/angular.js"></script>
@@ -46,6 +31,8 @@
     <script src="scripts/services/adsData.js"></script>
     <script src="scripts/controllers/NewAdController.js"></script>
     <script src="scripts/controllers/AllAdsController.js"></script>
+    <script src="scripts/controllers/AllTownsController.js"></script>
+    <script src="scripts/controllers/AllCategoriesController.js"></script>
     <script src="scripts/controllers/AllUserAdsController.js"></script>
     <script src="scripts/controllers/AdDetailsController.js"></script>
 </body>
