@@ -1,14 +1,16 @@
 <div data-ng-controller="AllCategoriesController" >
-    Categories
+    <strong>Categories</strong>
     <hr />
-    <p data-ng-repeat="category in categories">
-        <a>{{category.name}}</a>
-    </p>
+    <ul><a href="#/ads">All</a></ul>
+    <ul data-ng-repeat="category in categories">
+        <li>{{category.name}}</li>
+    </ul>
 </div>
 <div data-ng-controller="AllTownsController">
-    Towns
+    <strong>Towns</strong>
     <hr />
-    <p data-ng-repeat="town in towns">
-        <a>{{town.name}}</a>
-    </p>
+    <ul><a href="#/ads">All</a></ul>
+    <ul data-ng-repeat="town in towns">
+        <li>{{town.name}}</li>
+    </ul>
 </div>

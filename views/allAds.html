@@ -1,5 +1,5 @@
-<ul class="col-sm-12" ng-repeat="ad in data.ads">
-    <div>
+<section class="col-sm-12">
+    <div ng-repeat="ad in data.ads">
         <table id="adTable">
             <thead>
                 <th colspan="2">{{ad.title}}</th><th>{{ad.date | date : format : timezone}}</th>
@@ -18,4 +18,4 @@
             </tr>
         </table>
     </div>
-</ul>
+</section>

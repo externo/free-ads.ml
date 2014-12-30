@@ -3,6 +3,11 @@
     font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
 }
 
+section{
+    margin: auto 10px;
+    padding: auto 30px;
+}
+
 header, footer{
     height: 40px;
     background: #87E293;
@@ -14,6 +19,7 @@ header, footer{
 }
 
 .container{
+    align-content: center;
     background: #D7F4D4;
     width: 100%;
 }
@@ -46,11 +52,17 @@ table {
 div{
     background: #87E293;
     border: 1px solid #41924B;
-    margin: 10px;
+    margin: 10px auto;
     padding: 10px;
 }
 
-#left{
+ul>*
+{
+    list-style-type: none;
+    color: black;
+}
+
+.left{
     height: 40px;
     width: 200px;
     max-width: 200px;
@@ -58,9 +70,16 @@ div{
     text-align: center;
 }
 
-#login{
-    width: 300px;
+#login, #register{
     border-radius: 10px;
+}
+
+#login{
+    width: 220px;
+}
+
+#register{
+    width: 460px;
 }
 
 a.button{
