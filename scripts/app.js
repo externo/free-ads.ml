@@ -13,10 +13,6 @@ var app = angular.module('adsApp', ['ngResource', 'ngRoute'])
                 templateUrl: 'views/allAds.html',
                 controller: 'AllAdsController'
             })
-            .when('/adsByTown', {
-                templateUrl: 'views/allAds.html',
-                controller: 'AdsByTownController'
-            })
             .otherwise({
                 redirectTo: '/ads'
             });

@@ -17,7 +17,7 @@ app.factory('adsData', function ($resource, $http) {
         return allTowns;
     }
 
-    var adsByTown = function(){
+    var adsByTown = function(town){
         $resource(
             'http://softuni-ads.azurewebsites.net/api/ads?townid=' + town.id
         );

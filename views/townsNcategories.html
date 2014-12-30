@@ -3,7 +3,7 @@
     <hr />
     <ul><a href="#/ads">All</a></ul>
     <ul data-ng-repeat="category in categories">
-        <a id="{{category.id}}" ng-click="">{{category.name}}</a>
+        <a id="{{category.id}}" ng-click="getAdsByCategory(category)">{{category.name}}</a>
     </ul>
 </div>
 <div data-ng-controller="AllTownsController">
@@ -11,6 +11,6 @@
     <hr />
     <ul><a href="#/ads">All</a></ul>
     <ul data-ng-repeat="town in towns">
-        <a href="#/adsByTown" id="{{town.id}}">{{town.name}}</a>
+        <a id="{{town.id}}" ng-click="getAdsByTown(town)">{{town.name}}</a>
     </ul>
 </div>
