@@ -17,6 +17,16 @@ app.factory('adsData', function ($resource, $http) {
         return allTowns;
     }
 
+    var adsByTown = function(){
+        $resource(
+            'http://softuni-ads.azurewebsites.net/api/ads?townid=' + town.id
+        );
+    };
+
+    function getAdsByTown() {
+        return adsByTown.get();
+    }
+
     var allCategories = $http.get(
         'http://softuni-ads.azurewebsites.net/api/categories'
     );
@@ -56,6 +66,7 @@ app.factory('adsData', function ($resource, $http) {
 	return {
 		getAll: getAllAds,
 		getAllTowns: getAllTowns,
+        getAdsByTown: getAdsByTown,
 		getAllCategories: getAllCategories//,
         //getUserAll: getAllUserAds,
 		//create: createNewUserAd,
