@@ -11,6 +11,6 @@
     <hr />
     <ul><a href="#/ads">All</a></ul>
     <ul data-ng-repeat="town in towns">
-        <a id="{{town.id}}" ng-click="getAdsByTown(town)">{{town.name}}</a>
+        <a value="{{town.id}}" ng-click="getAdsByTown(town)">{{town.name}}</a>
     </ul>
 </div>

@@ -1,13 +1,18 @@
-app.controller('AdsByTownController', function($scope, $log, adsData) {
-	adsData.getAdsByTown()
-		.$promise
-		.then(function (data) {
-			$scope.data = data;
-		}, function (error) {
-			$log.error(error);
-		});
+"use strict";
 
-	$scope.reload = function () {
-		$route.reload();
-	}
-});
+app.directive('towns', [function () {
+    return {
+        restrict: 'M',
+        templateUrl: './views/townsNcategories.html',
+        link: function ($scope) {
+            $scope.getAdsByTown = function (town) {
+                if (town) {
+                    angular.extend($scope.adsRequestParams, {townId: town.id});
+                } else {
+                    delete $scope.adsRequestParams['townId'];
+                }
+                $scope.getAll(scope.adsRequestParams);
+            }
+        }
+    }
+}]);

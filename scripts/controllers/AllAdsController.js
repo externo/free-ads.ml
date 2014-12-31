@@ -3,7 +3,8 @@ app.controller('AllAdsController', function($scope, $route, $log, adsData) {
 		.$promise
 		.then(function (data) {
 			$scope.data = data;
-		}, function (error) {
+            $scope.adsRequestParams = {};
+        }, function (error) {
 			$log.error(error);
 		});
 
