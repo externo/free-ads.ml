@@ -1,15 +1,16 @@
-app.controller('AdsByTownController', function($scope, $log, adsData) {
-    adsData.getAdsByTown()
-        .$promise
-        .then(function (data) {
-            console.log('done');
-            $scope.data = data;
-        }, function (error) {
-            console.log('NOT done');
-            $log.error(error);
-        });
+app.controller('RightSideBarController', ['$scope', '$rootScope', 'categoriesService', 'townsService',
+    function RightSideBarController($scope, $rootScope, categoriesService, townsService) {
+        $scope.categories = categoriesService.getCategories();
+        $scope.towns = townsService.getTowns();
 
-    $scope.reload = function () {
-        $route.reload();
+        $scope.categoryClicked = function(event) {
+            var clickedCategoryId = $(event.target).data("id");
+            $rootScope.$broadcast("categorySelectionChanged", clickedCategoryId);
+        };
+
+        $scope.townClicked = function() {
+            var clickedTownId = $(event.target).data("id");
+            $rootScope.$broadcast("townSelectionChanged", clickedTownId);
+        };
     }
-});
+]);
