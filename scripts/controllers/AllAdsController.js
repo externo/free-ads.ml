@@ -11,18 +11,3 @@ app.controller('AllAdsController', function($scope, $route, $log, adsData) {
 		$route.reload();
 	}
 });
-
-app.controller('HomeController', ['$scope', '$rootScope', 'adsService', 'pageSize', function HomeController($scope, $rootScope, adsService, pageSize) {
-    // This event is sent by RightSideBarController when the current category is changed
-    $scope.$on("categorySelectionChanged", function(event, selectedCategoryId) {
-        $scope.adsParams.categoryId = selectedCategoryId;
-        $scope.reloadAds();
-    });
-
-    // This event is sent by RightSideBarController when the current town is changed
-    $scope.$on("townSelectionChanged", function(event, selectedTownId) {
-        $scope.adsParams.townId = selectedTownId;
-        $scope.reloadAds();
-    });
-}
-]);
