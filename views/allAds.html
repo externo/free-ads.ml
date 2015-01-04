@@ -1,5 +1,5 @@
 <section class="col-sm-12">
-    <div ng-repeat="ad in data.ads">
+    <div ng-repeat="ad in data.ads | filter:filterBy">
         <table id="adTable">
             <thead>
                 <th colspan="2">{{ad.title}}</th><th>{{ad.date | date : format : timezone}}</th>

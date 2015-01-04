@@ -10,7 +10,7 @@
     <strong>Towns</strong>
     <hr />
     <ul><a href="#/ads">All</a></ul>
-    <ul data-ng-repeat="town in towns">
-        <a  href='#/adsByTown' id="{{town.id}}" ng-click="getID(town.id)">{{town.name}}</a>
-    </ul>
+    <select data-ng-repeat="town in towns" data-ng-model="filterBy.id">
+        <option value="{{id}}" >{{town.name}}</option>
+    </select>
 </div>

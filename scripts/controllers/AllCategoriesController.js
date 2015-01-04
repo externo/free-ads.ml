@@ -1,3 +1,5 @@
+'use strict';
+
 app.controller('AllCategoriesController', function($scope, $log, adsData) {
 	adsData.getAllCategories()
 		.success(function (categories) {

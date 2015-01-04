@@ -1,11 +1,11 @@
 'use strict';
 
-app.controller('AdsByTownController', function($scope, $route, $log, $resource) {
-    $resource('http://softuni-ads.azurewebsites.net/api/ads?townid=' + 5).get()
-        .success(function (data) {
+app.controller('AdsByTownController', function($scope, $route, $log, adsData, town) {
+    adsData.getAdsByTown(town.id)
+        .$promise
+        .then(function (data) {
             $scope.data = data;
-        })
-        .error(function (error) {
+        }, function (error) {
             $log.error(error);
         });
 
