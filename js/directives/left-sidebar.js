@@ -1,10 +1,10 @@
 'use strict';
 
-app.directive('leftPublicSidebar', ['', function(){
+app.directive('leftPublicSidebar', function(){
     return{
+        controller: 'HomeCtrl',
         restrict: 'E',
         templateUrl: 'templates/public/left-sidebar.html',
-        controller: 'HomeCtrl',
         replace: true
     }
-}]);
+});
