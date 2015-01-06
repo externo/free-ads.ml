@@ -1,36 +1,58 @@
-<section class="col-sm-12">
-    <div id="register">
-        <form action="#" method="get">
-            <p>User registration</p><hr />
-            <table>
-                <tr>
-                    <td>Username:</td>
-                </tr>
-                <tr>
-                    <td><input type="text" name="username"></td>
-                </tr>
-                <tr>
-                    <td>Password:</td><td>Confirm password:</td>
-                </tr>
-                <tr>
-                    <td><input type="text" name="password"></td><td><input type="text" name="password"></td>
-                </tr>
-                <tr>
-                    <td>Name:</td><td>Email:</td>
-                </tr>
-                <tr>
-                    <td><input type="text" name="username"></td><td><input type="text" name="username"></td>
-                </tr>
-                <tr>
-                    <td>Phone:</td><td>Town:</td>
-                </tr>
-                <tr>
-                    <td><input type="text" name="username"></td><td><input type="text" name="username"></td>
-                </tr>
-                <tr>
-                    <td><a href="#/register" class="button">Register</a></td><td><a href="#/login">Login here</a></td>
-                </tr>
-            </table>
-        </form>
-    </div>
-</section>
+<div class="container">
+    <form class=""form-horizontal>
+        <fieldset>
+            <legend>Login</legend>
+            <div class="form-group">
+                <label for="inputUsername" class="col-lg-2 control-label">Username</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="inputUsername" placeholder="Username">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                <div class="col-lg-10">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputConfirmPassword" class="col-lg-2 control-label">Confirm Password</label>
+                <div class="col-lg-10">
+                    <input type="password" class="form-control" id="inputConfirmPassword" placeholder="Confirm Password">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputName" class="col-lg-2 control-label">Name</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="inputName" placeholder="Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPhone" class="col-lg-2 control-label">Phone</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="inputPhone" placeholder="Phone">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputTown" class="col-lg-2 control-label">Town</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="inputTown" placeholder="Town">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-lg-10 col-lg-offset-2">
+                    <button class="btn btn-default">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+            </div>
+
+        </fieldset>
+    </form>
+</div>

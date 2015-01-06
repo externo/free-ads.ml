@@ -4,17 +4,19 @@ var app = angular.module('adsApp', ['ngResource', 'ngRoute'])
     .config('$routeProvider', function ($routeProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: 'templates/home.html',
+                templateUrl: '/templates/home.html',
                 controller: 'HomeCtrl'
             })
             .when('/login', {
-                templateUrl: 'templates/login.html'
+                templateUrl: 'templates/login.html',
+                controller: 'LoginCtrl'
             })
             .when('/register', {
-                templateUrl: 'templates/register.html'
+                templateUrl: 'templates/register.html',
+                controller: 'RegisterCtrl'
             })
             .when('/ads', {
-                templateUrl: 'templates/allAds.html',
+                templateUrl: 'templates/ads.html',
                 controller: 'AllAdsController'
             })
             .when('/adsByTown', {
