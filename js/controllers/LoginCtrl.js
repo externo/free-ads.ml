@@ -1,3 +1,3 @@
-app.controller('HomeCtrl', ['$scope', function($scope){
+app.controller('LoginCtrl', ['$scope', function($scope){
     $scope.pageTitle = 'Home';
 }]);

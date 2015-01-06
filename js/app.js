@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('adsApp', ['ngResource', 'ngRoute'])
+var app = angular.module('adsApp', ['ngRoute'])
     .config('$routeProvider', function ($routeProvider) {
         $routeProvider
             .when('/', {
@@ -8,21 +8,21 @@ var app = angular.module('adsApp', ['ngResource', 'ngRoute'])
                 controller: 'HomeCtrl'
             })
             .when('/login', {
-                templateUrl: 'templates/login.html',
+                templateUrl: '/templates/login.html',
                 controller: 'LoginCtrl'
             })
             .when('/register', {
-                templateUrl: 'templates/register.html',
+                templateUrl: '/templates/register.html',
                 controller: 'RegisterCtrl'
             })
-            .when('/ads', {
-                templateUrl: 'templates/ads.html',
-                controller: 'AllAdsController'
-            })
-            .when('/adsByTown', {
-                templateUrl: 'templates/allAds.html',
-                controller: 'AdsByTownController'
-            })
+            //.when('/ads', {
+            //    templateUrl: 'templates/ads.html',
+            //    controller: 'AllAdsController'
+            //})
+            //.when('/adsByTown', {
+            //    templateUrl: 'templates/allAds.html',
+            //    controller: 'AdsByTownController'
+            //})
             .otherwise({
                 redirectTo: '/'
             });
