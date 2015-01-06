@@ -8,20 +8,20 @@ var app = angular.module('adsApp', ['ngResource', 'ngRoute'])
                 controller: 'HomeCtrl'
             })
             .when('/login', {
-                templateUrl: 'views/login.html'
+                templateUrl: 'templates/login.html'
             })
             .when('/register', {
-                templateUrl: 'views/register.html'
+                templateUrl: 'templates/register.html'
             })
             .when('/ads', {
-                templateUrl: 'views/allAds.html',
+                templateUrl: 'templates/allAds.html',
                 controller: 'AllAdsController'
             })
             .when('/adsByTown', {
-                templateUrl: 'views/allAds.html',
+                templateUrl: 'templates/allAds.html',
                 controller: 'AdsByTownController'
             })
             .otherwise({
-                redirectTo: '/ads'
+                redirectTo: '/'
             });
 });
