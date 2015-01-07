@@ -9,7 +9,12 @@ app.factory('userData', ['$resource', 'baseServiceUrl', 'authentication', functi
             });
     }
     function loginUser(user){
-
+        return $resource(baseServiceUrl + 'user/login')
+            .save(user)
+            .$promise
+            .then(function(data){
+                authentication.saveUser(data);
+            });
     }
     function logoutUser(){
 
