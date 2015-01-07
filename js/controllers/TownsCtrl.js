@@ -5,5 +5,9 @@ app.controller('TownsCtrl', ['$scope', 'townsData', function($scope, townsData) 
 		.$promise
 		.then(function (data) {
 			$scope.towns = data;
-		})
+		});
+
+	$scope.townClicked = function townClicked(town){
+		filter.filterByTown(town);
+	}
 }]);
