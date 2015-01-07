@@ -2,8 +2,8 @@
     <img src="images/loading.gif" ng-hide="ready" alt="">
     <ul>
         <li data-ng-repeat="ad in adsData.ads">
-            {{ad.title}} - {{ad.author}} <br />
-
+            {{ad.title}} <br />
+            {{ad.ownerName}}
         </li>
     </ul>
     <pagination
