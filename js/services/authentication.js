@@ -13,11 +13,24 @@ app.factory('authentication', function(){
         if (userData){
             headers.Authorization = 'Bearer' + getUserData().access_token;
         }
+
+        return headers;
+    }
+
+    function removeUser(){
+        localStorage.removeItem(key);
+    }
+
+    function isAdmin(){
+        var isAdmin = getUserData().isAdmin;
+        return isAdmin;
     }
 
     return {
         saveUser: saveUserData,
         getUser: getUserData,
-        getHeaders: getHeaders
+        getHeaders: getHeaders,
+        removeUser: removeUser,
+        isAdmin: isAdmin
     }
 });

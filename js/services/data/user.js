@@ -8,6 +8,7 @@ app.factory('userData', ['$resource', 'baseServiceUrl', 'authentication', functi
                 authentication.saveUser(data);
             });
     }
+
     function loginUser(user){
         return $resource(baseServiceUrl + 'user/login')
             .save(user)
@@ -16,8 +17,14 @@ app.factory('userData', ['$resource', 'baseServiceUrl', 'authentication', functi
                 authentication.saveUser(data);
             });
     }
-    function logoutUser(){
 
+    function logoutUser(){
+        return $resource(baseServiceUrl + 'user/logout')
+            .save(user)
+            .$promise
+            .then(function(data){
+                authentication.removeUser();
+            });
     }
 
     return {

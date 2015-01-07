@@ -29,6 +29,6 @@ app.config(['$routeProvider', function ($routeProvider) {
             .otherwise({
                 redirectTo: '/'
             });
-    localStorageServiceProvider.setStorageType('localStorage');
-    localStorageServiceProvider.setPrefix('adsApp');
+    //localStorageServiceProvider.setStorageType('localStorage');
+    //localStorageServiceProvider.setPrefix('adsApp');
 }]);
