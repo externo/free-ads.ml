@@ -6,7 +6,7 @@ app.controller('PublicAdsCtrl', ['$scope', 'adsData', 'filter', function($scope,
     function loadPublicAds(filterParams){
         filterParams = filterParams || {};
 
-        adsData.getPublicAds()
+        adsData.getPublicAds(filterParams)
             .$promise
             .then(function (data){
                 $scope.adsData = data;
