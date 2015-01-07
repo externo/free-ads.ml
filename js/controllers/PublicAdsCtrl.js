@@ -1,5 +1,9 @@
 'use strict';
 
-app.controller('PublicAdsCtrl', function($scope) {
-    $scope.ads =
-});
+app.controller('PublicAdsCtrl', ['$scope', 'adsData', function($scope, adsData) {
+    adsData.getPublicAds()
+        .$promise
+        .then(function (data){
+            $scope.adsData = data;
+        })
+}]);
