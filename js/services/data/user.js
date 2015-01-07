@@ -18,6 +18,6 @@ app.factory('userData', ['$resource', 'baseServiceUrl', 'authentication', functi
     return {
         register: registerUser,
         login: loginUser,
-        logout: logout
+        logout: logoutUser
     }
 }]);
