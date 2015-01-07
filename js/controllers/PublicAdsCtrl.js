@@ -17,14 +17,15 @@ app.controller('PublicAdsCtrl', ['$scope', 'adsData', 'filter', function($scope,
     loadPublicAds();
 
     $scope.pageChanged = function(){
-
+        filter.setPageParams({startPage: $scope.currentPage, pageSize: numItems / numPages});
+        adsData.getPublicAds(filter.getParams());
     };
 
     $scope.$on('categoryClicked', function(event, category){
-        loadPublicAds(filter.getFilterParams());
+        loadPublicAds(filter.getParams());
     });
 
     $scope.$on('townClicked', function(event, town){
-        loadPublicAds(filter.getFilterParams());
+        loadPublicAds(filter.getParams());
     });
 }]);

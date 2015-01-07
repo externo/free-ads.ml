@@ -2,12 +2,13 @@
     <img src="images/loading.gif" ng-hide="ready" alt="">
     <ul>
         <li data-ng-repeat="ad in adsData.ads">
-            {{ad.title}}
+            {{ad.title}} - {{ad.author}} <br />
+
         </li>
     </ul>
     <pagination
             page="startPage"
-            ng-model="startPage"
+            ng-model="currentPage"
             total-items="adsData.numItems"
             ng-change="pageChanged()"
             items-per-page="pageSize">
