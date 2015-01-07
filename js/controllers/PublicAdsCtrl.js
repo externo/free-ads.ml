@@ -16,7 +16,15 @@ app.controller('PublicAdsCtrl', ['$scope', 'adsData', 'filter', function($scope,
 
     loadPublicAds();
 
+    $scope.pageChanged = function(){
+
+    };
+
     $scope.$on('categoryClicked', function(event, category){
+        loadPublicAds(filter.getFilterParams());
+    });
+
+    $scope.$on('townClicked', function(event, town){
         loadPublicAds(filter.getFilterParams());
     });
 }]);

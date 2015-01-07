@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('TownsCtrl', ['$scope', 'townsData', function($scope, townsData) {
+app.controller('TownsCtrl', ['$scope', '$rootScope', 'townsData', 'filter', function($scope, $rootScope, townsData, filter) {
 	townsData.getTowns()
 		.$promise
 		.then(function (data) {
@@ -9,5 +9,6 @@ app.controller('TownsCtrl', ['$scope', 'townsData', function($scope, townsData) 
 
 	$scope.townClicked = function townClicked(town){
 		filter.filterByTown(town);
+        $rootScope.$broadcast('townClicked', town);
 	}
 }]);
