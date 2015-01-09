@@ -20,6 +20,6 @@ app.factory('filter', function(){
     return {
         filterByCategory: filterByCategory,
         filterByTown: filterByTown,
-        getParams: getParams,
+        getParams: getParams
     }
 });
