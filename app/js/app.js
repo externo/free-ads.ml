@@ -19,6 +19,19 @@ app.config(function ($routeProvider) {
             templateUrl: 'templates/register.html',
             controller: 'RegisterController'
         })
+        .when('/user/ads/publish', {
+            templateUrl: 'templates/user/publish-new-ad.html',
+            controller: 'UserPublishNewAdController'
+        })
         .otherwise({ redirectTo: '/' });
 
 });
+
+app.run(function ($rootScope, $location, authService) {
+    $rootScope.$on('$locationChangeStart', function (event) {
+        if ($location.path().indexOf("/user/") != -1 && !authService.isLoggedIn()) {
+            $location.path("/");
+        }
+    });
+});
+
