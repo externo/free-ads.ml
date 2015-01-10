@@ -1,11 +1,15 @@
-app.controller('LoginCtrl', ['$scope', '$location', 'userData', function($scope, $location, userData){
-
-    $scope.login = function(user){
-        userData.login(user)
-            .$promise
-            .then(function (data){
-                $location.path('/');
-            })
-
+app.controller('LoginCtrl',
+    function ($scope, $rootScope, $location, authService) {
+        $scope.login = function(userData) {
+            authService.login(userData,
+                function success() {
+                    $location.path("/");
+                    console.log("success");
+                },
+                function error(err) {
+                    console.log("error");
+                }
+            );
+        };
     }
-}]);
+);

@@ -7,6 +7,14 @@ app.controller('RegisterCtrl', ['$scope', 'townsData', 'userData', function($sco
         });
 
     $scope.register = function(user){
-        userData.register(user);
+        userData.register(user)
+            .$promise
+            .then(
+            function () {
+                console.log("success");
+            },
+            function (err) {
+                console.log("error");
+            })
     }
 }]);

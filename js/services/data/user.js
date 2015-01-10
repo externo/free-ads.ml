@@ -1,4 +1,4 @@
-app.factory('userData', ['$resource', 'baseServiceUrl', 'authentication', function($resource, baseServiceUrl, authentication){
+app.factory('userData', ['$resource', 'baseServiceUrl', 'authentication', '$http', function($resource, baseServiceUrl, authentication, $http){
 
     function registerUser(user){
         return $resource(baseServiceUrl + 'user/register')
@@ -9,15 +9,16 @@ app.factory('userData', ['$resource', 'baseServiceUrl', 'authentication', functi
             });
     }
 
-    function loginUser(user){
-        var resource = $resource(baseServiceUrl + 'user/login')
-            .save(user);
-        $resource
-            .$promise
-            .then(function(data){
-                authentication.saveUser(data);
-            });
-        return resource;
+    function loginUser(user, success, error){
+        var request = {
+            method: 'POST',
+            url: baseServiceUrl + 'user/login',
+            data: user
+        };
+        $http(request).success(function(data) {
+            sessionStorage['currentUser'] = JSON.stringify(data);
+            success(data);
+        }).error(error);
     }
 
     function logoutUser(){
