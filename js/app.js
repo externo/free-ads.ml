@@ -22,10 +22,6 @@ app.config(['$routeProvider', function ($routeProvider) {
             //    templateUrl: 'templates/ads.html',
             //    controller: 'AllAdsController'
             //})
-            //.when('/adsByTown', {
-            //    templateUrl: 'templates/allAds.html',
-            //    controller: 'AdsByTownController'
-            //})
             .otherwise({
                 redirectTo: '/'
             });
