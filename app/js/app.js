@@ -19,6 +19,10 @@ app.config(function ($routeProvider) {
             templateUrl: 'templates/register.html',
             controller: 'RegisterController'
         })
+        .when('/user/ads', {
+            templateUrl: 'templates/user/ads.html',
+            controller: 'UserAdsService'
+        })
         .when('/user/ads/publish', {
             templateUrl: 'templates/user/publish-new-ad.html',
             controller: 'UserPublishNewAdController'
