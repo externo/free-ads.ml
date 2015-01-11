@@ -7,7 +7,9 @@
     <li ng-repeat="ad in ads.ads" class="box" data-id="{{ad.id}}">
         <h1>{{ad.title}} <span>{{ad.date | date:'dd.mm.yyyy'}}</span></h1>
         <div ng-if='ad.imageDataUrl'>
-            <img class="ad-image" ng-src="{{ad.imageDataUrl}}" />
+            <!--<imgng-src="{{ad.imageDataUrl}}" />-->
+            <img class="ad-image"  ng-src="{{ad.imageDataUrl }}" err-src="../images/no-image.png" />
+            <img data-ng-if="!ad.imageDataUrl" data-ng-src="../images/no-image.png" />
         </div>
         <div><strong>Text:</strong> {{ad.text}}</div>
         <div><strong>Name:</strong> {{ad.ownerName}}</div>
