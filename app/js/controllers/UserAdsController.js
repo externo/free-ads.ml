@@ -1,10 +1,24 @@
 'use strict';
 
 app.controller('UserAdsController',
-    function ($scope, $rootScope, $location, adsService, authService, notifyService, $resource) {
-        $rootScope.pageTitle = "User ads";
+    function ($scope, userAdsService, notifyService, pageSize) {
+        $scope.adsParams = {
+            'startPage': 1,
+            'pageSize': pageSize
+        };
 
-        $scope.userAds = adsService.getAds($resource);
+        $scope.userAds = function () {
+            userAdsService.getAds(
+                $scope.adsParams,
+                function success(data) {
+                    $scope.ads = data;
+                },
+                function error(err) {
+                    notifyService.showError("Cannot load ads", err);
+                }
+            );
+        };
 
+        $scope.userAds();
     }
 );
