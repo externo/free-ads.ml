@@ -1,6 +1,6 @@
 'use strict';
 
-app.factory('UserAdsService',
+app.factory('userAdsService',
     function ($resource, baseServiceUrl) {
         var adsResource = $resource(
             baseServiceUrl + '/api/user/ads',

@@ -1,0 +1,9 @@
+<li ng-repeat="ad in userAds" class="box" data-id="{{ad.id}}">
+    <h1>{{ad.title}} <span>{{ad.date | date:'dd.mm.yyyy'}}</span></h1>
+    <div ng-if='ad.imageDataUrl'>
+        <img class="ad-image" ng-src="{{ad.imageDataUrl}}" />
+    </div>
+    <div><strong>Text:</strong> {{ad.text}}</div>
+    <div><strong>Name:</strong> {{ad.ownerName}}</div>
+    <div>{{ad.ownerEmail}} {{ad.ownerPhone}}</div>
+</li>
