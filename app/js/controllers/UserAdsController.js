@@ -1,19 +1,8 @@
-'use strict';
+﻿'use strict';
 
-app.controller('UserAdsController',
-    function ($scope, userAdsService, notifyService, pageSize) {
-
-        $scope.userAds = function (requestParams) {
-            userAdsService.getUserAds(requestParams)
-                .then(
-                function getUserAdsSuccess(userAdsData) {
-                    $scope.userAds = userAdsData.ads;
-                    $scope.pagesArr = new Array(userAdsData.numPages);
-                },
-                function getUserAdsError(userAdsError) {
-                    console.log(userAdsError);
-                }
-            )
-        };
-    }
-);
+app.controller('UserAdsController', function($scope, adsData) {
+    var url = 'http://softuni-ads.azurewebsites.net/api/Ads'; // TODO edit it
+    adsData.getAds(url).then( function(data) {
+        $scope.Ads = data.ads;
+    });
+});
